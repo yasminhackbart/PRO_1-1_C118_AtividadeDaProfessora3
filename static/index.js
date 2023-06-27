@@ -32,27 +32,10 @@ $(function () {
             }
         });
     });
-    $("#save_button").click(function () {
-        save_data = {
-            "date": new_date,
-            "text": $("#text").val(),
-            "emotion": predicted_emotion
-        }
-        $.ajax({
-            type: 'POST',
-            url: "/save-entry",
-            data: JSON.stringify(save_data),
-            dataType: "json",
-            contentType: 'application/json',
-            success: function () {
-                alert("Sua entrada foi salva com sucesso!")
-                window.location.reload()
-            },
-            error: function (result) {
-                alert(result.responseJSON.message)
-            }
-        });
 
-    });
+
+#faça quando o botão de salvar for pressionado
+
+    
 })
 
